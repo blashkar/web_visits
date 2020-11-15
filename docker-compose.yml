@@ -3,7 +3,8 @@ version: "3"
 services:
   redis-server:
     image: 'redis'
-  Mynode-app:
+  mynode-app:
+    restart: on-failure
     build: ./
     ports: 
       - "8080:8080"
